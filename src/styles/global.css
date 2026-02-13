@@ -10,3 +10,7 @@ img {
   height: auto;
   display: block;
 }
+
+main {
+  background-color: #c6a9aa;
+}
