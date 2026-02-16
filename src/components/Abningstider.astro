@@ -1,47 +1,53 @@
 <body>
+  <article id="aabningstider">
+    <h2 class="titel">Caféens åbningstider</h2>
 
-<article class="åbningstider">
-    <h2 class="titel">Caféens åbningstider</h2>  
+    <div class="flex-container">
+      <div class="dag">
+        <p>Mandag</p>
+        <p>Tirsdag</p>
+        <p>Onsdag</p>
+        <p>Torsdag</p>
+        <p>Fredag</p>
+        <p>Lørdag</p>
+        <p>Søndag</p>
+      </div>
 
-<div class="flex-container">
-<div class="dag">
-<p>Mandag</p>
-<p>Tirsdag</p>
-<p>Onsdag</p>
-<p>Torsdag</p>
-<p>Fredag</p>
-<p>Lørdag</p>
-<p>Søndag</p>
-</div>
-
-<div class="tid">
-<p>12 - 16 (selvbetjening)</p>
-<p>12 - 17</p>
-<p>12 - 20 (onsdagsgryde)</p>
-<p>12 - 20 (fællespisning)</p>
-<p>12 - 16</p>
-<p>Lukket</p>
-<p>Lukket</p>
-</div>
-</div>
-</article>  
+      <div class="tid">
+        <p>12 - 16 (selvbetjening)</p>
+        <p>12 - 17</p>
+        <p>12 - 20 (onsdagsgryde)</p>
+        <p>12 - 20 (fællespisning)</p>
+        <p>12 - 16</p>
+        <p>Lukket</p>
+        <p>Lukket</p>
+      </div>
+    </div>
+  </article>
 </body>
 
 <style>
-.h2{
-        text-align: center;
-        color: #261321;
-
-    }
-.flex-container{
+  #aabningstider {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .titel {
+    text-align: center;
+    color: #261321;
+  }
+  .flex-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
     padding: 20px;
-}
+    gap: 50px;
+  }
 
-.dag .tid{
+  .dag p,
+  .tid p {
+    line-height: 2;
     display: block;
     color: #261321;
-}
+    padding: 5px 0;
+    margin: 0;
+  }
 </style>
