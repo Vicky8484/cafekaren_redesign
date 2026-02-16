@@ -1,0 +1,129 @@
+<body>
+
+
+    <article id="modpersonale">
+        <h2 class="titel">Mød vores søde køkkenpersonale</h2>
+        <div class="container">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="person-kort">
+                            <img class="person-img" src="billede2.png" alt="">
+                            <div class="personkort-tekst">
+                                <h2><b>Susan Hinke, Køkkenleder</b></h2>
+                                <br>
+                                <p>Susan er leder i køkkenet og står bag den ugentlige lækre menu, og sorteringen
+                                    af de
+                                    gode,
+                                    økologiske råvarer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="person-kort">
+                            <img class="person-img" src="billede.JPG" alt="">
+                            <div class="personkort-tekst">
+                                <h2><b>Susan Hinke, Køkkenleder</b></h2>
+                                <br>
+                                <p>Susan er leder i køkkenet og står bag den ugentlige lækre menu, og sorteringen  af de
+                                    gode,
+                                    økologiske råvarer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </article>
+                                   
+</body>
+
+<style>
+
+.container {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #261321;
+  color: #a67686;
+  padding: 6rem;
+  padding-top: 0;
+  padding-left: 0;
+  margin-left: 1rem;
+}
+
+article {
+  background-color: #261321;
+  margin-left: 8rem;
+}
+
+.titel {
+  padding-top: 3rem;
+  padding-left: 15rem;
+  font-size: 2rem;
+  color: #a67686;
+}
+
+/*ydre YDRE wrapper*/
+.swiper {
+  width: 90%;
+  height: fit-content;
+}
+
+.personkort-tekst {
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+
+.person-img {
+  width: 300px;
+  height: 300px;
+}
+
+p {
+  width: 330px;
+}
+
+.person-kort {
+  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  padding-left: 10rem;
+  padding-top: 3rem;
+}
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Valgfri parametrer
+            loop: true,
+
+            // prikker der viser slide
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigerings pile
+            navigation: {
+                nextEl: '.swiper-button-next',
+                // prevEl: '.swiper-button-prev',
+            },
+        });
+
+    </script>
