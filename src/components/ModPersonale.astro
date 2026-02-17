@@ -1,0 +1,116 @@
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+<article id="modpersonale">
+  <h2 class="titel">Mød vores søde køkkenpersonale</h2>
+  <div class="container">
+    <!-- Slider main container -->
+
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+
+        <div class="swiper-slide">
+          <div class="person-kort">
+            <img class="person-img" src="/img/personale1.webp" alt="personale1" />
+            <div class="personkort-tekst">
+              <h2><b>Susan Hinke, Køkkenleder</b></h2>
+              <br />
+              <p>Susan er leder i køkkenet og står bag den ugentlige lækre menu, og sorteringen af de gode, økologiske råvarer.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="person-kort">
+            <img class="person-img" src="/img/personale2.webp" alt="personale2" />
+            <div class="personkort-tekst">
+              <h2><b>Simon, Køkkenarbejder</b></h2>
+              <br />
+              <p>Simon er altmuligmand, men står som oftest i køkkenet og laver...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- If we need pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    background-color: #261321;
+    margin-left: 10.5rem;
+  }
+
+  #modpersonale {
+    background-color: #261321;
+    color: #a67686;
+    padding: 4rem 2rem;
+  }
+
+  .titel {
+    padding-top: 0;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #a67686;
+    margin-left: 2rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+
+    background-color: #261321;
+    color: #a67686;
+  }
+
+  /*ydre YDRE wrapper*/
+  .swiper {
+    width: 100%;
+  }
+
+  .swiper-button-next {
+    color: #a67686;
+  }
+
+  .personkort-tekst {
+    padding-top: 0;
+    padding-left: 1rem;
+    max-width: 500px;
+  }
+
+  .person-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  p {
+    width: 330px;
+  }
+
+  .person-kort {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    new Swiper(".swiper", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      navigation: { nextEl: ".swiper-button-next" },
+    });
+  });
+</script>

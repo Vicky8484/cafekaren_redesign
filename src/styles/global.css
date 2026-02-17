@@ -11,6 +11,10 @@ img {
   display: block;
 }
 
-main {
+body {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   background-color: #c6a9aa;
 }

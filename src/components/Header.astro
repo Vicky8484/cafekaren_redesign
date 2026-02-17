@@ -1,0 +1,69 @@
+<header>
+  <nav class="headernav">
+    <a href="#">ARRANGEMENTER</a>
+
+    <div class="dropdown">
+      <a href="#" class="drop-link">CAFÈ KAREN</a>
+      <div class="dropdown-content">
+        <a href="#main-box">VORES CAFÈ</a>
+        <a href="#menukort">MENUKORT</a>
+        <a href="#fællesspisning">FÆLLESSPISNING</a>
+      </div>
+    </div>
+
+    <a href="#">UDLEJNING</a>
+    <a href="#">OM HUSET</a>
+  </nav>
+</header>
+
+<style>
+  .headernav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #c6a9aa;
+  }
+
+  header a {
+    position: relative;
+    font-size: 30px;
+    color: #261321;
+    text-decoration: none;
+  }
+
+  .dropdown:hover .drop-link {
+    font-weight: 700;
+  }
+
+  /* dropdown menu*/
+  .dropdown {
+    position: relative;
+    color: #c6a9aa;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    min-width: 160px;
+    z-index: 1000;
+  }
+
+  .dropdown-content a {
+    display: block;
+    font-size: 15px;
+    padding: 15px 18px;
+    color: #c6a9aa;
+    background-color: #261321;
+  }
+
+  .dropdown-content a:hover {
+    display: block;
+    color: #934967;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    color: #934967;
+  }
+</style>

@@ -1,0 +1,114 @@
+<article>
+  <div></div>
+
+  <div id="main-box">
+    <!--box 1 -->
+    <div class="box box-open">
+      <div class="text-box">
+        <h3 class="hide">Café</h3>
+        <p class="hide">Vores café er hjertet i huset. Vi har en stor kærlighed til håndværket, hvilket vil sige at alt laves fra bunden, med gode råvarer som sikrer en høj kvalitet. Inspiration til vores udvalg hentes både fra det globale køkken og gamle danske klassikere.</p>
+      </div>
+      <div class="cover">
+        <img src="/img/cafe.webp" alt="et billede" />
+        <p>Caféen</p>
+      </div>
+    </div>
+
+    <!--box 2 -->
+    <div class="box box-open">
+      <div class="text-box">
+        <h3 class="hide">Fællesspisning</h3>
+        <p class="hide">Hver torsdag spiser vi sammen i Café Karen. Maden bliver serveret kl. 18.00 og dagens menu bliver serveret af vores dejlige personale. Der er altid et vegetarisk alternativ hvis du kontakter køkkenet på forhånd.</p>
+      </div>
+      <div class="cover">
+        <img src="/img/faellesspisning.webp" alt="et billede" />
+        <p>Fællesspisning</p>
+      </div>
+    </div>
+
+    <!--box 3 -->
+    <div class="box box-open">
+      <div class="text-box">
+        <h3 class="hide">Økologi og grønne retter</h3>
+        <p class="hide">Vores ingredienser består så vidt muligt af gode økologiske råvarer – omtrent 80% af ingredienserne er økologiske – og der lægges vægt på gode smagsoplevelser og smukke anretninger. Vi foretrækker at have et mindre udvalg, som varierer fra uge til uge.</p>
+      </div>
+      <div class="cover">
+        <img src="/img/okologi.webp" alt="et billede" />
+        <p>Økologi & grønne retter</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    margin-top: 4rem;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    margin-bottom: 2rem;
+  }
+  #main-box {
+    background-color: #261321;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+  }
+
+  /*boksene indeni main-box*/
+  .box {
+    padding: 1rem;
+    height: 400px;
+    flex: 1;
+    transition: 2s;
+    cursor: pointer;
+  }
+
+  /*hvordan de ser ud i hover*/
+  .box:hover {
+    background-color: #a67686;
+    color: #ffff;
+  }
+
+  /*ekstra box class, næsten ingen funktion*/
+  .box-open {
+    display: flex;
+  }
+
+  /*tekst der skal gemmes udenfor hover*/
+  .hide {
+    display: none;
+  }
+
+  /*billeder*/
+  img {
+    padding-bottom: 1rem;
+  }
+
+  .box:hover .hide {
+    display: flex;
+    display: block;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0rem;
+    color: white;
+  }
+
+  .box:hover .cover {
+    display: flex;
+    display: none;
+  }
+
+  .text-box h3 {
+    padding-top: 2rem;
+  }
+
+  .text-box p {
+    padding-top: 1rem;
+  }
+
+  p {
+    color: #c6a9aa;
+    font-size: 1.2rem;
+  }
+</style>

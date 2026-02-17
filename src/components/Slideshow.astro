@@ -1,0 +1,58 @@
+<div class="slideshow">
+  <div class="slideshow-wrapper">
+    <div class="slide-img"><img src="/img/slideshow1.webp" alt="" /></div>
+    <div class="slide-img"><img src="/img/slideshow2.webp" alt="" /></div>
+    <div class="slide-img"><img src="/img/okologi.webp" alt="" /></div>
+  </div>
+  <div aria-hidden class="slideshow-wrapper">
+    <div class="slide-img"><img src="/img/slideshow1.webp" alt="" /></div>
+    <div class="slide-img"><img src="/img/slideshow2.webp" alt="" /></div>
+    <div class="slide-img"><img src="/img/okologi.webp" alt="" /></div>
+  </div>
+  <div aria-hidden class="slideshow-wrapper">
+    <div class="slide-img"><img src="/img/slideshow1.webp" alt="" /></div>
+    <div class="slide-img"><img src="/img/slideshow2.webp" alt="" /></div>
+    <div class="slide-img"><img src="/img/okologi.webp" alt="" /></div>
+  </div>
+</div>
+
+<style>
+  /*slide-animation*/
+  .slideshow {
+    margin-block: 2rem;
+    margin-left: 7rem;
+
+    /* border: red 5px solid; */
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .slideshow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slideshow img {
+    border-radius: 0;
+    width: 400px;
+    height: 300px;
+    opacity: 90%;
+  }
+
+  .slideshow-wrapper {
+    display: flex;
+    animation: spin 12s infinite linear;
+  }
+
+  .slide-img {
+    flex: 0 0 5em;
+  }
+
+  @keyframes spin {
+    from {
+      translate: 0;
+    }
+    to {
+      translate: -100%;
+    }
+  }
+</style>
