@@ -1,13 +1,11 @@
 ---
 import "../styles/global.css";
-import "../styles/om_mad.css";
 import MenuKort from "./MenuKort.astro";
 import Faellesspisning from "./Faellesspisning.astro";
 ---
 
 <MenuKort />
 <Faellesspisning />
-
 <section class="container">
   <div class="left">
     <h2>Hvad vi tilbyder</h2>
@@ -32,166 +30,70 @@ import Faellesspisning from "./Faellesspisning.astro";
   </div>
 
   <div class="right">
-    <img src="imgs/kmk2.webp" alt="Mad" />
-    <img src="imgs/kmk1.webp" alt="Mad" />
-    <img src="imgs/kmk3.webp" alt="Mad" />
+    <img src="/public/img/mad1.webp" alt="Mad" />
+    <img src="/public/img/mad2.webp" alt="Mad" />
+    <img src="/public/img/mad3.webp" alt="Mad" />
   </div>
 </section>
-<div id="menuPopover" popover class="menu-popover">
-  <button class="close-btn" popovertarget="menuPopover" popovertargetaction="hide"> ✕ </button>
 
-  <div class="menu-content">
-    <h2 class="section-title">mad</h2>
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-left: 10rem;
+    padding-block: 50px;
+  }
 
-    <div class="menu-grid">
-      <div>
-        <p class="time">FRA KL. 12-15</p>
+  .left h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
 
-        <div class="menu-item">
-          <div>
-            <h3>Åben sandwich</h3>
-            <p>Rugbrød med lækkert fyld og årstidens grønt.</p>
-          </div>
-          <span>75 KR</span>
-        </div>
+  .left h3 {
+    font-size: 20px;
+    margin: 30px 0 10px;
+  }
 
-        <div class="menu-item">
-          <div>
-            <h3>Dagens madtærte</h3>
-            <p>Med årstidens grønne salat.</p>
-          </div>
-          <span>75 KR</span>
-        </div>
+  .left p {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
 
-        <div class="menu-item">
-          <div>
-            <h3>Dagens suppe</h3>
-            <p>Serveret med brød til.</p>
-          </div>
-          <span>75 KR</span>
-        </div>
-      </div>
+  .section {
+    margin-top: 20px;
+  }
 
-      <div>
-        <h3 class="sub-headline">Hele dagen</h3>
+  .right {
+    display: grid;
+    gap: 30px;
+  }
 
-        <div class="menu-item">
-          <div>
-            <p>Nybagte boller</p>
-            <p class="small">Med smør og/eller ost.</p>
-          </div>
-          <span>30 KR</span>
-        </div>
+  .right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-inline: 60px;
+  }
 
-        <div class="menu-item">
-          <div>
-            <p>Dagens kage</p>
-          </div>
-          <span>25 KR</span>
-        </div>
+  .btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 12px 24px;
+    background-color: #a67686;
+    border: 2px solid #5c3c3c;
+    color: #2c1e1e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 30px;
+  }
+  .btn:first-of-type {
+    margin-bottom: 60px;
+  }
 
-        <div class="menu-item">
-          <div>
-            <p>Muffins</p>
-            <p class="small">Dagens udvalg</p>
-          </div>
-          <span>25 KR</span>
-        </div>
-
-        <div class="menu-item">
-          <div>
-            <p>Dagens søde</p>
-            <p class="small">Tærte eller kage<br />Dagens udvalg</p>
-          </div>
-          <span>45 KR</span>
-        </div>
-
-        <div class="allergener">
-          <p>Allergener</p>
-          <p class="small">Spørg i baren</p>
-        </div>
-      </div>
-    </div>
-
-    <h2 class="section-title">drikke</h2>
-
-    <div class="menu-grid">
-      <div>
-        <h2>Varme drikke</h2>
-
-        <div class="drink-item"><span>Kaffe og Te</span><span>10 KR</span></div>
-        <div class="drink-item"><span>Espresso</span><span>20 KR</span></div>
-        <div class="drink-item"><span>Americano</span><span>25 KR</span></div>
-        <div class="drink-item"><span>Cortado</span><span>25 KR</span></div>
-        <div class="drink-item"><span>Flat White</span><span>25 KR</span></div>
-        <div class="drink-item"><span>Cappuccino</span><span>30 KR</span></div>
-        <div class="drink-item"><span>Latte alm/stor</span><span>30/40 KR</span></div>
-
-        <div class="drink-item"><span>Varm Chokolade med/uden flødeskum</span><span>25/40 KR</span></div>
-        <div class="drink-item"><span>Chai</span><span>40 KR</span></div>
-      </div>
-
-      <div>
-        <h2>Kolde drikke</h2>
-
-        <div class="drink-item"><span>Iskaffe</span><span>40 KR</span></div>
-        <div class="drink-item"><span>Affogato</span><span>35 KR</span></div>
-
-        <div class="drink-item"><span>Økovand</span><span>30 KR</span></div>
-        <div class="drink-item"><span>Juice</span><span>35 KR</span></div>
-        <div class="drink-item"><span>Mælk</span><span>10 KR</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="faellesspisningPopover" popover class="menu-popover">
-  <button class="close-btn" popovertarget="faellesspisningPopover" popovertargetaction="hide"> ✕ </button>
-
-  <div class="menu-content">
-    <h2 class="section-title">Fællesspisnings-menu</h2>
-
-    <p class="intro">Hver Torsdag serveres maden til fællesspisning fra kl. 18</p>
-
-    <p class="price-info">
-      Voksne 105,-<br />
-      Børn 50,-
-    </p>
-
-    <h4 class="month">Februar</h4>
-
-    <div class="event">
-      <p class="date">05.02</p>
-      <h4>Vegetarisk lasagne</h4>
-      <p>Serveres med sprød slicede gulerødder, rucola med cæsardressing og hjemmebagt foccacia.</p>
-    </div>
-
-    <div class="event">
-      <p class="date">12.02</p>
-      <h4>Karens Coq au vin</h4>
-      <p>Karens Coq au vin. Serveres med kartoffel/rodfrugt mos og hjemmebagt madbrød.</p>
-    </div>
-
-    <div class="event">
-      <p class="date">19.02</p>
-      <h4>Grøn Dahl med raita</h4>
-      <p>Serveres med blomkålshapser i Indisk marinade, chutney og pappadums.</p>
-    </div>
-
-    <div class="event">
-      <p class="date">26.02</p>
-      <h4>Boller i karry de luxe</h4>
-      <p>Serveres med ris.</p>
-    </div>
-
-    <h4 class="month">Marts</h4>
-
-    <div class="event">
-      <p class="date">05.03</p>
-      <h4>Menu</h4>
-      <p>Menubeskrivelse</p>
-    </div>
-
-    <button class="ticket-btn"> KØB BILLET TIL FÆLLESSPISNING </button>
-  </div>
-</div>
+  .btn:hover {
+    background-color: #261321;
+    color: #c6a9aa;
+  }
+</style>
