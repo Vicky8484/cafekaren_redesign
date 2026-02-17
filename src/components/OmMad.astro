@@ -1,9 +1,100 @@
 ---
+import "../styles/global.css";
 import MenuKort from "./MenuKort.astro";
 import Faellesspisning from "./Faellesspisning.astro";
 ---
 
+<MenuKort />
+<Faellesspisning />
 
+<section class="container">
+  <div class="left">
+    <h2>Hvad vi tilbyder</h2>
 
-<MenuKort/>
-<Faellesspisning/>
+    <p>Vi har altid friske hjemmebagte boller, diverse hjemmebagte kager, cookies, en åben sandwich på ristet rugbrød med lækkert fyld (fra kl. 12-15), og andet lækkert. Desuden har vi altid kaffe på kanden til en 10'er.</p>
+
+    <button class="btn" popovertarget="menuPopover"> VIS MENUKORT </button>
+
+    <div class="section">
+      <h3>Onsdagsgryde (vegetarisk)</h3>
+      <p>Onsdag kan man fra kl. 17.00 også få dagens lækre, vegetariske gryderet.</p>
+    </div>
+
+    <div class="section">
+      <h3>Fællesspisning</h3>
+      <p>Hver torsdag spiser vi sammen i Café Karen.</p>
+      <p>Prisen er 105 kr. for voksne, 50 kr. for børn (op til 12 år). Maden bliver serveret kl. 18.00 af vores dejlige personale.</p>
+      <p>Der er altid et vegetarisk alternativ hvis du kontakter køkkenet på forhånd.</p>
+    </div>
+
+    <button class="btn" popovertarget="faellesspisningPopover"> VIS MENU FOR FÆLLESSPISNING </button>
+  </div>
+
+  <div class="right">
+    <img src="/public/img/mad1.webp" alt="Mad" />
+    <img src="/public/img/mad2.webp" alt="Mad" />
+    <img src="/public/img/mad3.webp" alt="Mad" />
+  </div>
+</section>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-left: 10rem;
+    padding-block: 50px;
+  }
+
+  .left h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .left h3 {
+    font-size: 20px;
+    margin: 30px 0 10px;
+  }
+
+  .left p {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .section {
+    margin-top: 20px;
+  }
+
+  .right {
+    display: grid;
+    gap: 30px;
+  }
+
+  .right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-inline: 60px;
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 12px 24px;
+    background-color: #a67686;
+    border: 2px solid #5c3c3c;
+    color: #2c1e1e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 30px;
+  }
+  .btn:first-of-type {
+    margin-bottom: 60px;
+  }
+
+  .btn:hover {
+    background-color: #261321;
+    color: #c6a9aa;
+  }
+</style>

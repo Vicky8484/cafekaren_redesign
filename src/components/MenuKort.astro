@@ -1,0 +1,235 @@
+<div id="menuPopover" popover class="menu-popover">
+  <button class="close-btn" popovertarget="menuPopover" popovertargetaction="hide"> ✕ </button>
+
+  <div class="menu-content">
+    <h2 class="section-title">mad</h2>
+
+    <div class="menu-grid">
+      <div>
+        <p class="time">FRA KL. 12-15</p>
+
+        <div class="menu-item">
+          <div>
+            <h3>Åben sandwich</h3>
+            <p>Rugbrød med lækkert fyld og årstidens grønt.</p>
+          </div>
+          <span>75 KR</span>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <h3>Dagens madtærte</h3>
+            <p>Med årstidens grønne salat.</p>
+          </div>
+          <span>75 KR</span>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <h3>Dagens suppe</h3>
+            <p>Serveret med brød til.</p>
+          </div>
+          <span>75 KR</span>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="sub-headline">Hele dagen</h2>
+
+        <div class="menu-item">
+          <div>
+            <p>Nybagte boller</p>
+            <p class="small">Med smør og/eller ost.</p>
+          </div>
+          <span>30 KR</span>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <p>Dagens kage</p>
+          </div>
+          <span>25 KR</span>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <p>Muffins</p>
+            <p class="small">Dagens udvalg</p>
+          </div>
+          <span>25 KR</span>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <p>Dagens søde</p>
+            <p class="small">Tærte eller kage<br />Dagens udvalg</p>
+          </div>
+          <span>45 KR</span>
+        </div>
+
+        <div class="allergener">
+          <p>Allergener</p>
+          <p class="small">Spørg i baren</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">drikke</h2>
+
+    <div class="menu-grid">
+      <div>
+        <h2>Varme drikke</h2>
+
+        <div class="drink-item"><span>Kaffe og Te</span><span>10 KR</span></div>
+        <div class="drink-item"><span>Espresso</span><span>20 KR</span></div>
+        <div class="drink-item"><span>Americano</span><span>25 KR</span></div>
+        <div class="drink-item"><span>Cortado</span><span>25 KR</span></div>
+        <div class="drink-item"><span>Flat White</span><span>25 KR</span></div>
+        <div class="drink-item"><span>Cappuccino</span><span>30 KR</span></div>
+        <div class="drink-item"><span>Latte alm/stor</span><span>30/40 KR</span></div>
+
+        <div class="drink-item"><span>Varm Chokolade med/uden flødeskum</span><span>25/40 KR</span></div>
+        <div class="drink-item"><span>Chai</span><span>40 KR</span></div>
+      </div>
+
+      <div>
+        <h2>Kolde drikke</h2>
+
+        <div class="drink-item"><span>Iskaffe</span><span>40 KR</span></div>
+        <div class="drink-item"><span>Affogato</span><span>35 KR</span></div>
+
+        <div class="drink-item"><span>Økovand</span><span>30 KR</span></div>
+        <div class="drink-item"><span>Juice</span><span>35 KR</span></div>
+        <div class="drink-item"><span>Mælk</span><span>10 KR</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .menu-popover {
+    width: 70%;
+    min-width: 400px;
+    max-width: 1100px;
+    height: 85vh;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: none;
+    border-radius: 8px;
+    background: #e7e1e1;
+    padding: 60px;
+  }
+
+  .menu-popover:popover-open {
+    animation: popIn 0.25s ease forwards;
+  }
+
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .menu-popover:popover-open::backdrop {
+    animation: backdropFade 0.25s ease forwards;
+  }
+
+  @keyframes backdropFade {
+    from {
+      background: rgba(0, 0, 0, 0);
+    }
+    to {
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .menu-content {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 20px;
+  }
+
+  .menu-content::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .menu-content::-webkit-scrollbar-thumb {
+    background: #b58f8f;
+    border-radius: 10px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #261321;
+    color: #c6a9aa;
+    border: none;
+    font-size: 26px;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .menu-popover:popover-open .close-btn:hover {
+    background: #5c3c3c;
+    transform: scale(1.1);
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 40px;
+    margin: 40px 0;
+    padding: 10px 0;
+    border-top: 1px solid #2c1e1e;
+    border-bottom: 1px solid #2c1e1e;
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  .menu-grid h2 {
+    margin-bottom: 20px;
+  }
+
+  .menu-item,
+  .drink-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .drink-item {
+    margin-bottom: 12px;
+  }
+
+  .small {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .time {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .sub-headline {
+    margin-bottom: 20px;
+  }
+
+  .allergener {
+    margin-top: 40px;
+  }
+</style>
