@@ -31,18 +31,17 @@ import Faellesspisning from "./Faellesspisning.astro";
   </div>
 
   <div class="right">
-    <img src="/public/img/mad1.webp" alt="Mad" />
-    <img src="/public/img/mad2.webp" alt="Mad" />
-    <img src="/public/img/mad3.webp" alt="Mad" />
+    <img src="/img/mad1.webp" alt="Mad" />
+    <img src="/img/mad2.webp" alt="Mad" />
+    <img src="/img/mad3.webp" alt="Mad" />
   </div>
 </section>
 
 <style>
   .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 60px;
-    margin-left: 10rem;
+    margin-left: 14rem;
     padding-block: 50px;
   }
 
@@ -59,6 +58,7 @@ import Faellesspisning from "./Faellesspisning.astro";
   .left p {
     margin-bottom: 15px;
     font-size: 18px;
+    width: 700px;
   }
 
   .section {
@@ -73,8 +73,8 @@ import Faellesspisning from "./Faellesspisning.astro";
   .right img {
     width: 100%;
     height: auto;
-    object-fit: cover;
     padding-inline: 60px;
+    width: 400px;
   }
 
   .btn {
@@ -87,7 +87,7 @@ import Faellesspisning from "./Faellesspisning.astro";
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 30px;
+    font-size: 1.5rem;
   }
   .btn:first-of-type {
     margin-bottom: 60px;
